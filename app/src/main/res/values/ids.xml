@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="accountNameTextView" type="id" />
+    <item name="codeNameTextView" type="id" />
+    <item name="rateNameTextView" type="id" />
+</resources>
