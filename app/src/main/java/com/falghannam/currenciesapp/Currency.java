@@ -1,7 +1,7 @@
 package com.falghannam.currenciesapp;
 
 public class Currency {
-        private String currencyCode;
+    private String currencyCode;
     private String currenyName;
     private double exchangeRate;
 
@@ -12,6 +12,7 @@ public class Currency {
         this.exchangeRate = exchangeRate;
 
     }
+
     public String getCurrencyCode() {
         return currencyCode;
     }

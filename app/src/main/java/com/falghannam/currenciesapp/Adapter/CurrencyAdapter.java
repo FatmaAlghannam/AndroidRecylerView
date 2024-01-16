@@ -18,17 +18,17 @@ import java.util.ArrayList;
 public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.AccountViewHolder> {
 
 
-    private final ArrayList<Currency> accountLists;
+    private final ArrayList<Currency> CurrencyLists;
 
     public CurrencyAdapter(ArrayList<Currency> accountsLists) {
-        this.accountLists = accountsLists;
+        this.CurrencyLists = accountsLists;
     }
 
     @NonNull
     @Override//inflater and we view it after and not adding to the
     public AccountViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(
-                R.layout.bank_account_item,
+                R.layout.currencyitem,
                 parent,
                 false
         );
@@ -38,7 +38,9 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.Accoun
 
     @Override
     public void onBindViewHolder(@NonNull AccountViewHolder holder, int position) {
-        holder.nameTestView.setText((CharSequence) accountLists.get(position));
+        holder.nameTestView.setText(CurrencyLists.get(position).getCurrenyName());
+        holder.codeTestView.setText(CurrencyLists.get(position).getCurrencyCode());
+        holder.rateTestView.setText(String.valueOf(CurrencyLists.get(position).getExchangeRate()));
 
 
     }
@@ -47,7 +49,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.Accoun
     @Override
     public int getItemCount() {
 
-        return accountLists.size();
+        return CurrencyLists.size();
     }
 
     public static class AccountViewHolder extends RecyclerView.ViewHolder {
@@ -58,17 +60,12 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.Accoun
 
         public AccountViewHolder(@NonNull View itemView) {
             super(itemView);
-            nameTestView = itemView.findViewById(R.id.accountNameTextView);
-            codeTestView = itemView.findViewById(R.id.codeNameTextView);
-            rateTestView = itemView.findViewById(R.id.rateNameTextView);
+            nameTestView = itemView.findViewById(R.id.nameTextView10);
+            codeTestView = itemView.findViewById(R.id.codeNameTextView11);
+            rateTestView = itemView.findViewById(R.id.rateNameTextView12);
 
         }
     }
 
-    private void Account() {
-        for (int i = 0; i < 10; i++) {
-            Currency Currencys = new Currency("KWD", "Kuwait Dinar", 1);
 
-        }
-    }
 }
