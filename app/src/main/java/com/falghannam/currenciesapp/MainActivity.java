@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.falghannam.currenciesapp.Adapter.CurrencyAdapter;
@@ -15,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView currencyRecyclerViews;
     ArrayList<Currency> currencyList = new ArrayList<>();
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
